@@ -287,7 +287,7 @@ applyJacobianInverse(Teuchos::ParameterList &p,
     printMatrix = dynamic_cast<Epetra_RowMatrix*>(jacPtr.get()); 
 
     if (printMatrix == NULL) {
-      cout << "Error: NOX::Epetra::LinearSystemAztecOO::applyJacobianInverse() - "
+      std::cout << "Error: NOX::Epetra::LinearSystemAztecOO::applyJacobianInverse() - "
 	   << "Could not cast the Jacobian operator to an Epetra_RowMatrix!"
 	   << "Please set the \"Write Linear System\" parameter to false."
 	   << std::endl;
