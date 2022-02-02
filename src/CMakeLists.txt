@@ -110,9 +110,7 @@ if (${phist_FOUND})
   target_link_libraries(hymls ${PHIST_LIBRARIES})
 endif()
 
-if (${HYMLS_MEMORY_PROFILING})
-  target_link_libraries(hymls ${CMAKE_DL_LIBS})
-endif()
+target_link_libraries(hymls ${CMAKE_DL_LIBS})
 
 add_executable(hymls_main main.cpp)
 target_link_libraries(hymls_main hymls)
